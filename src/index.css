@@ -1,0 +1,77 @@
+:root {
+  --primary-color: #ff6f61;
+  --secondary-color: #4a4a4a;
+  --background-color: #f4f4f9;
+  --text-color: #333333;
+  --link-color: #ff6f61;
+  --link-hover-color: #ff3b2f;
+  --button-background-color: #ff6f61;
+  --button-hover-background-color: #ff3b2f;
+  --button-text-color: #ffffff;
+
+  font-family: 'Roboto', sans-serif;
+  /* Add missing semicolon */
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--link-hover-color);
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  color: var(--primary-color);
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+button:hover {
+  background-color: var(--button-hover-background-color);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #333333;
+    --text-color: #f4f4f9;
+    --link-color: #ff6f61;
+    --link-hover-color: #ff3b2f;
+    --button-background-color: #ff6f61;
+    --button-hover-background-color: #ff3b2f;
+  }
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+}
